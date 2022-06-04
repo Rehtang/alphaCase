@@ -12,6 +12,7 @@ public interface GifFeignClient {
     GifResponseDto receiveGif(
             @RequestParam("api_key") String apiKey,
             @RequestParam("limit") int limit,
-            @RequestParam("q") String searchPhrase
+            @RequestParam("q") String searchPhrase,
+            @RequestParam("offset") int startPosition
     );
 }

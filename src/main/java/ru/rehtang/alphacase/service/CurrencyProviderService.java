@@ -32,7 +32,7 @@ public class CurrencyProviderService {
     }
 
     private Date yesterday() {
-        final Calendar cal = Calendar.getInstance();
+        Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DATE, -1);
         return cal.getTime();
     }

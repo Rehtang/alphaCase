@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import ru.rehtang.alphacase.dto.GifResponseDto;
 import ru.rehtang.alphacase.feign.GifFeignClient;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 @Service
 @RequiredArgsConstructor
 public class GifProviderService {
@@ -25,10 +27,10 @@ public class GifProviderService {
     private int limit;
 
     public GifResponseDto getRichGif() {
-        return client.receiveGif(gifApiKey, limit, richPhrase);
+        return client.receiveGif(gifApiKey, limit, richPhrase, ThreadLocalRandom.current().nextInt(0, 4999));
     }
 
     public GifResponseDto getSadGif() {
-        return client.receiveGif(gifApiKey, limit, sadPhrase);
+        return client.receiveGif(gifApiKey, limit, sadPhrase, ThreadLocalRandom.current().nextInt(0, 4999));
     }
 }

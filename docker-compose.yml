@@ -5,7 +5,7 @@ services:
     environment:
       GIF_PHRASE: rich
       GIF_SAD_PHRASE: broke
-      GIF_LIMIT: 5
+      GIF_LIMIT: 1
       CURRENCY_SYMBOL: USD
     build: .
     ports:
