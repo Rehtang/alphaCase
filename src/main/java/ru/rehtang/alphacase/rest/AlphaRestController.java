@@ -35,8 +35,12 @@ public class AlphaRestController {
         var yesterday = currencyService.getYesterdayCurrency();
         if (today.getRates().getRub() < yesterday.getRates().getRub()) {
             return gifProviderService.getSadGif().getDataDtoList().get(random);
+        } else if (today.getRates().getRub() == yesterday.getRates().getRub()) {
+            return new DataDto("nothing changed");
+        } else {
+            return gifProviderService.getRichGif().getDataDtoList().get(random);
         }
-        return gifProviderService.getRichGif().getDataDtoList().get(random);
+
     }
 
     @GetMapping("/gif")
