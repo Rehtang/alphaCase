@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  alpha_case:
+    environment:
+      GIF_PHRASE: rich
+      GIF_SAD_PHRASE: broke
+      GIF_LIMIT: 1
+      CURRENCY_SYMBOL: USD
+    build: .
+    ports:
+      - "8080:8080"
