@@ -1,0 +1,18 @@
+spring:
+  main:
+    banner-mode: off
+
+
+alphaCase:
+  feign:
+    gif:
+      apiKey: "6WtcHCNEkbrrN57FNDD68hJAJChSRuCE"
+      url: "api.giphy.com/v1/gifs/search"
+      searchPhrase:
+        rich: "rich"
+        sad: "broke"
+      limit: 1
+    currency:
+      apiKey: "5af44adea3da47ffaa7709b5eef23eb1"
+      url: "https://openexchangerates.org/api"
+      symbol: "USD"
