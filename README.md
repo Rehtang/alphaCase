@@ -57,3 +57,13 @@ $ git clone https://github.com/Rehtang/alphaCase
 $ cd alphaСase
 $ docker-compose up
 ```
+
+### Stack:
+```
+Java 11
+Spring Boot 2
+Spring Cloud Netflix: Feign Clients
+Docker
+Mockito
+Gradle
+```
